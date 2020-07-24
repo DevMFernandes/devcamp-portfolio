@@ -3,5 +3,5 @@
 <% @portfolio_items.each do |item| %>
     <h2><%= item.title %></h2>
     <p><%= item.description %></p>
-    <%= image_tag item.thumb %>
+    <%= image_tag item.thumb unless item.thumb.nil? %>
 <% end %>
