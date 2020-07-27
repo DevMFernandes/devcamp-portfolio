@@ -38,3 +38,11 @@ end
         thumb: "https://placehold.it/350x200"
     )
 end
+
+3.times do |tech|
+    Portfolio.find(rand(1..Portfolio.last.id))
+        .technologies
+        .create!(
+            name: "Technology #{tech}"
+        )
+end
