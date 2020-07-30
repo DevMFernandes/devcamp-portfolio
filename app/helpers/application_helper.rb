@@ -6,6 +6,12 @@ module ApplicationHelper
        else
         (link_to "Login", new_user_session_path) + " " +
         (link_to "Register", new_user_registration_path)
-     end
+       end
+    end
+
+    def session_helper
+        if session[:source]
+            content_tag(:p, "Thanks for visiting me from #{session[:source]}")
+        end
     end
 end
