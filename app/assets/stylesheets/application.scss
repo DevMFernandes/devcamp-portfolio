@@ -117,7 +117,10 @@ body {
 }
 
 .auth-links {
-  a {
+  a, &-right a {
     color: black;
+  }
+  &-right {
+    text-align: right;
   }
 }
