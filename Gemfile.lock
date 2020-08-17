@@ -80,6 +80,8 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1-x64-mingw32)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
@@ -88,6 +90,18 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     loofah (2.6.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -203,8 +217,10 @@ DEPENDENCIES
   bootstrap (~> 4.5.0)
   byebug
   devise (~> 4.7, >= 4.7.2)
+  font-awesome-rails (~> 4.7, >= 4.7.0.5)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.7)
+  kaminari (~> 1.2, >= 1.2.1)
   petergate (~> 2.0, >= 2.0.1)
   pg (>= 0.18, < 2.0)
   pry-byebug
