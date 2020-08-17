@@ -16,7 +16,15 @@
 
     <%= render 'shared/blog_nav'%>
     
-    <%= yield %>
+    <main role="main" class="container">
+      <h1>Blogs</h1>
+      <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+      <hr>
+      <div class="row">
+        <%= yield %>
+        <%= render "sidebar"%>
+      </div>
+    </main>
 
     <%= render 'shared/blog_footer' %>
 
