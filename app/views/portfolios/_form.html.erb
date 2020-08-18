@@ -1,27 +1,35 @@
 <%= form_for(portfolio_item) do |form| %>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :title %>
+          <%= form.text_field :title, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :subtitle %>
+          <%= form.text_field :subtitle, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :description %>
+          <%= form.text_area :description, class: "form-control", rows: 13 %>
+        </div>
+      </div>
+    </div>
   </div>
+  
 
-  <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <ul>
+  <div class="form-group">
+    <h3>Technologies</h3>
     <%= form.fields_for :technologies do |tech_form| %>
-      <li><%= tech_form.label :name %>
-      <%= tech_form.text_field :name %></li>
+      <%= tech_form.label :name %>
+      <%= tech_form.text_field :name, class: "form-control" %>
     <% end %>
-  </ul>
+  </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: "btn btn-primary btn-block" %>
   </div>
 <% end %>
