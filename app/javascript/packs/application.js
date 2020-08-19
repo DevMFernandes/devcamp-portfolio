@@ -4,6 +4,10 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
+require("html.sortable")
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
