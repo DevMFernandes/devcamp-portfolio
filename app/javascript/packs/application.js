@@ -8,14 +8,9 @@ require("html.sortable")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
 import '../jquery-ui'
-     
-$(
-        () => {
-                $('.sortable').sortable()
-        }
-)
+import '../portfolios'
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
