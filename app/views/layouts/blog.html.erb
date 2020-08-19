@@ -6,21 +6,27 @@
     <%= csp_meta_tag %>
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>
+    <%= render 'shared/blog_nav'%>
     
-    <%= yield %>
+    <main role="main" class="container">
+      <h1>Blogs</h1>
+      <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+      <hr>
+      <div class="row">
+        <%= yield %>
+        <%= render "sidebar"%>
+      </div>
+    </main>
 
-    <%= render "/shared/nav" %>
+    <%= render 'shared/blog_footer' %>
 
-    <%= session_helper %>
   </body>
 </html>

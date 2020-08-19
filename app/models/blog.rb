@@ -5,5 +5,7 @@ class Blog < ApplicationRecord
 
     validates_presence_of :title, :body
 
+    paginates_per 5
+
     belongs_to :topic
 end
