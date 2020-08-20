@@ -29,7 +29,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 
 body {
@@ -104,7 +103,7 @@ body {
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: white;
 }
 
 /*
@@ -130,4 +129,19 @@ body {
     width: 22rem;
     margin: 0 auto;
   }
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(to top, rgba(0,0,0,.2), rgba(0,0,0,.8)),
+              image-url('tech.jpg') no-repeat;
+  z-index: -100;
+  background-size: cover;
 }
